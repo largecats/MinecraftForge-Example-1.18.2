@@ -3,6 +3,7 @@ package net.largecats.examplemod;
 import com.mojang.logging.LogUtils;
 import net.largecats.examplemod.entity.ModEntityTypes;
 import net.largecats.examplemod.entity.client.RaccoonRenderer;
+import net.largecats.examplemod.entity.client.SeekerRenderer;
 import net.largecats.examplemod.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Block;
@@ -50,6 +51,7 @@ public class ExampleMod
 
     private void clientSetup(final FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
+        EntityRenderers.register(ModEntityTypes.SEEKER.get(), SeekerRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)
